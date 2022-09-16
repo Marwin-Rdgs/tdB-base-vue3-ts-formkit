@@ -5,7 +5,7 @@
     // On fait une variable réactive qui réactive qui réference les données
     // ATTENTION : faire une Ref pas une Reactive car :
     // c'est l'objet qui doit être réactif, pas ses props
-    const maison = ref({nom:"test-ref-formkit", price:29, favoris:false, txt:"test de formkit", nbbath:4, nbsize:"89 m²", img:"/card.jpg"});
+    const maison = ref({nom:"test-ref-formkit", price:29, favoris:false, txt:"test de formkit", nbbath:4, nblit:3, nbsize:"89 m²", img:"/card.jpg"});
 </script>
 
 <template>
@@ -25,10 +25,16 @@
                                     label: 'text-gray-600',
                                 },
                     }"
-            :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }">
+            :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded text-center' } }">
                 <FormKit name="nom" label="nom" />
+                <FormKit name="txt" label="Desicription"/>
                 <FormKit name="price" label="prix" type="number"/>
-                <FormKit name="favoris" label="mettre en valeur" type="checkbox" wrapper-class="flex"/>
+                <div class="flex gap-5">
+                    <FormKit name="nbsize" label="Superficie"/>
+                    <FormKit name="nblit" label="Nombre de lit" type="number"/>
+                    <FormKit name="nbbath" label="Nombre de Salle de bains" type="number"/>
+                </div>
+                <FormKit name="favoris" label="mettre en valeur" type="checkbox" wrapper-class="flex gap-4"/>
             </FormKit>
         </div>
     </div>
