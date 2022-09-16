@@ -21,7 +21,7 @@
             <FormKit type="form" v-model="maison"
             :config="{
                         classes: {
-                                    input: 'p-1 rounded border-gray-300 shadow-sm border bg-red-300 hover:bg-green-500',
+                                    input: 'p-1 rounded border-gray-300 shadow-sm border bg-red-300 hover:bg-green-500 hover:border-4 hover:animate-pulse',
                                     label: 'text-gray-600',
                                 },
                     }"
