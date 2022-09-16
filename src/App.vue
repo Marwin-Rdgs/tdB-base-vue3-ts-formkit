@@ -7,7 +7,7 @@
     <ul>
       <li>
         <router-link class="text-red-600 underline" to="/">
-          lien vers
+          lien vers test
           <code class="font-mono">/src/pages/index.vue</code>
         </router-link>
       </li>
